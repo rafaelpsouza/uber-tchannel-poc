@@ -16,7 +16,7 @@ public class Client {
     
     public static void main(String[] args) throws UnknownHostException, InterruptedException, ExecutionException {
         // create another TChannel for client.
-        TChannel client = new TChannel.Builder("ping-client").build();
+        TChannel client = new TChannel.Builder("ping-client").setInitTimeout(5000).build();
         RawRequest request = new RawRequest.Builder("ping-server", "ping-handler")
                 .setHeader("Marco")
                 .setBody("Ping!")
