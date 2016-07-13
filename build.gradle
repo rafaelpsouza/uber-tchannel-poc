@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+group = 'rafaelpsouza'
+
+jar {
+    baseName = 'uber-tchannel-poc'
+    version =  '1.0'
+}
+
+repositories {
+	jcenter()
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile group: 'com.uber.tchannel', name: 'tchannel', version: '0.4.1', ext: 'pom'
+    compile group: 'com.uber.tchannel', name: 'tchannel-core', version: '0.4.1'
+    compile group: 'com.uber.tchannel', name: 'tchannel-example', version: '0.4.1'
+    compile group: 'com.uber.tchannel', name: 'tchannel-hyperbahn', version: '0.4.1'
+}
